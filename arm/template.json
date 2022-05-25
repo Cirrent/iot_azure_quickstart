@@ -63,6 +63,7 @@
         "reserved": true,
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
         "siteConfig": {
+          "linuxFxVersion": "Node|16",
           "appSettings": [
             {
               "name": "AzureWebJobsStorage",
