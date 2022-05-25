@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cross-env AUDIENCE=TestAWSAccount cross-env IS_LOCAL=1 cross-env NODE_OPTIONS=--experimental-vm-modules jest -i --coverage --colors --verbose"
+    "test": "npx cross-env AUDIENCE=TestAzureAccount cross-env IS_LOCAL=1 cross-env NODE_OPTIONS=--experimental-vm-modules jest -i --coverage --colors --verbose"
   },
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-iot": "^3.87.0",
     "cache-manager": "^3.6.1",
     "compression": "^1.7.4",
     "express": "^4.18.1",
@@ -21,13 +20,10 @@
     "serverless-http": "^3.0.1"
   },
   "devDependencies": {
-    "aws-sdk-client-mock": "^0.6.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.15.0",
     "jest": "^28.1.0",
     "prettier": "^2.6.2",
-    "serverless": "^3.17.0",
-    "serverless-azure-functions": "^2.1.3",
     "supertest": "^6.2.3"
   },
   "jest": {

@@ -30,6 +30,10 @@ app.use((err, _, res, next) => {
   });
 });
 
-const handler = serverlessHttp(app);
+const handler = serverlessHttp(app, { provider: "azure" });
 
-export { handler, app };
+async function azureHandler(context, req) {
+  context.res = await handler(context, req);
+}
+
+export { azureHandler, app };
