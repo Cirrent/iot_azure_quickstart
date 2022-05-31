@@ -15,7 +15,7 @@
     "iotHubName": "[concat('ifx-hub-', uniqueString(parameters('seedName')))]",
     "iotHubKeyName": "iothubowner",
     "provisioningServiceName": "[concat('ifx-prov-', uniqueString(parameters('seedName')))]",
-    "storageAccountName": "[concat('ifx-stor', uniqueString(parameters('seedName')))]",
+    "storageAccountName": "[concat('stor', uniqueString(parameters('seedName')))]",
     "functionAppName": "[concat('ifx-iop-', uniqueString(parameters('seedName')))]"
   },
   "resources": [

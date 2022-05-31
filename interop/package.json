@@ -8,6 +8,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "azure-iot-provisioning-service": "^1.10.0",
     "cache-manager": "^3.6.1",
     "compression": "^1.7.4",
     "express": "^4.18.1",
@@ -17,7 +18,7 @@
     "http-status": "^1.5.2",
     "joi": "^17.6.0",
     "jsrsasign": "^10.5.20",
-    "serverless-http": "^3.0.1"
+    "serverless-http": "https://github.com/curtdept/serverless-http.git#master"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
