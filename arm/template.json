@@ -11,12 +11,12 @@
     }
   },
   "variables": {
-    "hostingPlanName": "[uniqueString(parameters('prefixName'))]",
-    "iotHubName": "[uniqueString(parameters('prefixName'))]",
-    "iotHubKeyName": "[uniqueString(parameters('prefixName'))]",
-    "provisioningServiceName": "[uniqueString(parameters('prefixName'))]",
-    "storageAccountName": "[uniqueString(parameters('prefixName'))]",
-    "functionAppName": "[uniqueString(parameters('prefixName'))]"
+    "hostingPlanName": "[concat('hosting-', uniqueString(parameters('prefixName')))]",
+    "iotHubName": "[concat('hub-', uniqueString(parameters('prefixName')))]",
+    "iotHubKeyName": "[concat('hubKey-', uniqueString(parameters('prefixName')))]",
+    "provisioningServiceName": "[concat('dps-', uniqueString(parameters('prefixName')))]",
+    "storageAccountName": "[concat('storage-', uniqueString(parameters('prefixName')))]",
+    "functionAppName": "[concat('interop-', uniqueString(parameters('prefixName')))]"
   },
   "resources": [
     {
