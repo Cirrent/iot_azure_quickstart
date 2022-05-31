@@ -13,7 +13,7 @@
   "variables": {
     "hostingPlanName": "[concat('hosting', uniqueString(parameters('prefixName')))]",
     "iotHubName": "[concat('hub', uniqueString(parameters('prefixName')))]",
-    "iotHubKeyName": "[concat('hubKey', uniqueString(parameters('prefixName')))]",
+    "iotHubKeyName": "iothubowner",
     "provisioningServiceName": "[concat('dps', uniqueString(parameters('prefixName')))]",
     "storageAccountName": "[concat('storage', uniqueString(parameters('prefixName')))]",
     "functionAppName": "[concat('interop', uniqueString(parameters('prefixName')))]"
