@@ -2,21 +2,21 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "prefixName": {
+    "seedName": {
       "type": "string",
-      "defaultValue": "ifx",
+      "defaultValue": "[uniqueString(subscription().subscriptionId)]",
       "metadata": {
-        "description": "The base name for the Azure resources bebing created."
+        "description": "The unique seed used for generating name strings"
       }
     }
   },
   "variables": {
-    "hostingPlanName": "[concat('hosting', uniqueString(parameters('prefixName')))]",
-    "iotHubName": "[concat('hub', uniqueString(parameters('prefixName')))]",
+    "hostingPlanName": "[concat('hosting', uniqueString(parameters('seedName')))]",
+    "iotHubName": "[concat('hub', uniqueString(parameters('seedName')))]",
     "iotHubKeyName": "iothubowner",
-    "provisioningServiceName": "[concat('dps', uniqueString(parameters('prefixName')))]",
-    "storageAccountName": "[concat('storage', uniqueString(parameters('prefixName')))]",
-    "functionAppName": "[concat('interop', uniqueString(parameters('prefixName')))]"
+    "provisioningServiceName": "[concat('dps', uniqueString(parameters('seedName')))]",
+    "storageAccountName": "[concat('storage', uniqueString(parameters('seedName')))]",
+    "functionAppName": "[concat('interop', uniqueString(parameters('seedName')))]"
   },
   "resources": [
     {
@@ -97,7 +97,7 @@
         "name": "S1",
         "capacity": 1
       },
-      "dependsOn": [ "[variables('iotHubName')]" ],
+      "dependsOn": ["[variables('iotHubName')]"],
       "properties": {
         "iotHubs": [
           {
