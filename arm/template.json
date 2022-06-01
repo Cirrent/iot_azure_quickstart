@@ -114,5 +114,11 @@
         "packageUri": "https://raw.githubusercontent.com/Cirrent/iot_azure_quickstart/master/releases/interop.zip"
       }
     }
-  ]
+  ],
+  "outputs": {
+    "interopURL": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Web/sites', variables('functionAppName')), '2018-02-01').defaultHostName]"
+    }
+  }
 }
