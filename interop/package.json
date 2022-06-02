@@ -9,7 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "azure-iot-provisioning-service": "^1.10.0",
-    "cache-manager": "^3.6.1",
+    "cache-manager": "^4.0.0",
     "compression": "^1.7.4",
     "express": "^4.18.1",
     "fast-jwt": "^1.5.4",
