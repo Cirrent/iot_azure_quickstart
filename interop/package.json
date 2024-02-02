@@ -19,7 +19,7 @@
     "got": "^12.5.2",
     "http-status": "^1.5.3",
     "joi": "^17.6.3",
-    "jsrsasign": "^10.5.27",
+    "jsrsasign": "^11.1.0",
     "serverless-http": "^3.0.3"
   },
   "devDependencies": {
